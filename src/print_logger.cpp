@@ -4,4 +4,6 @@
 
 void PrintLogger::log(std::string message)
 {
+    // very simple :)
+    std::cout << message;
 }
