@@ -13,12 +13,8 @@ FileLogger::FileLogger(std::string filename)
 // Implement this:
 void FileLogger::log(std::string msg)
 {
-    // this part is really confusing
-    // just "logfile << msg;" would error in the test as "abcde" not "abcde\n"
-    // "logfile << msg << std::endl;" also didn't work, maybe because it was "abcdef\r\n" instead of "abcdef\n"?
-    // haven't done much C++ so not used to writing to files like this.
-    logfile << msg << "\n";
-    logfile.flush();
+    // put the log message into the file
+    logfile << msg;
 }
 
 // Implement this:
