@@ -20,7 +20,6 @@ void FileLogger::log(std::string msg)
 FileLogger::~FileLogger()
 {
     // closes the file when the logger is deconstructed
-    // potentially dangerous?
-    // what if logger class is deleted before calculator is deleted?
+    // what if user deletes the logger object but keeps using calculator?
     logfile.close();
 }
